@@ -1,0 +1,15 @@
+body{
+    width: 960px;
+    background-size: cover;
+    background-image: url(img/menu.jpg);
+}
+
+
+.menu{
+    position: relative; /* 今の位置を基準 */
+    top: 300px; 
+    left: 520px;
+    width: 300px;
+    height: 100px;
+    font-size: large;
+}

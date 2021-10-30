@@ -1,0 +1,21 @@
+body{
+    background-color:white;
+}
+
+.button_gu{
+    position: relative; /* 今の位置を基準 */
+    top: 500px; 
+    left: 340px;
+}
+
+.button_cho{
+    position: relative; /* 今の位置を基準 */
+    top: 500px; 
+    left: 340px;
+}
+
+.button_pa  {
+    position: relative; /* 今の位置を基準 */
+    top: 500px; 
+    left: 340px;
+}
