@@ -21,11 +21,11 @@ body{
 }
 
 .timer_css{
-    width: 80px;
+    width: 75px;
     font-size: 30px;
     font-weight: bold;
     margin-left: 700px;
 
     padding-right: 100px ;
-    border: solid 3px #000000;
+    border: solid 4px #000000;
 }
