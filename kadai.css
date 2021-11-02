@@ -19,3 +19,13 @@ body{
     top: 500px; 
     left: 340px;
 }
+
+.timer_css{
+    width: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 700px;
+
+    padding-right: 100px ;
+    border: solid 3px #000000;
+}
