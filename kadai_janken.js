@@ -284,8 +284,9 @@ if (randomnumber2 === 2) {
 $('#his').on('click', function () {
     const jsonData = localStorage.getItem("memo");
     const winhis = JSON.parse(jsonData);
-    console.log(winhis);
-    //document.getElementById("output-wintime").innerHTML = winhis;
+    const winhistext = winhis.text
+    console.log(winhistext);
+    document.getElementById("output_wintime").innerHTML = winhistext;
 });
 
 
