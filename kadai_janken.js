@@ -214,7 +214,7 @@ if (randomnumber2 === 0) {
             text: wintime,
         };
         const jsonData = JSON.stringify(winhis);
-        localStorage.setItem("memo", jsonData);
+        localStorage.setItem(wintime, jsonData);
 
 
     });
@@ -235,7 +235,7 @@ if (randomnumber2 === 1) {
             text: wintime,
         };
         const jsonData = JSON.stringify(winhis);
-        localStorage.setItem("memo", jsonData);
+        localStorage.setItem(wintime, jsonData);
     });
 
     $('#button_cho').on('click', function () {
@@ -256,6 +256,7 @@ if (randomnumber2 === 2) {
     });
 
     $('#button_cho').on('click', function () {
+
         alert("勝ち！賞金があります！");
         //location.href = 'kadai_janken_win.html';
         clearTimeout(timerId);
@@ -264,12 +265,15 @@ if (randomnumber2 === 2) {
 
 
         //戦績の記録
+
         const winhis = {
             title: "結果",
             text: wintime,
         };
+
         const jsonData = JSON.stringify(winhis);
-        localStorage.setItem("memo", jsonData);
+        localStorage.setItem(wintime, jsonData);
+
 
     });
 
@@ -280,13 +284,27 @@ if (randomnumber2 === 2) {
 }
 
 
-//直近の記録閲覧
+
+//過去の記録閲覧
 $('#his').on('click', function () {
-    const jsonData = localStorage.getItem("memo");
-    const winhis = JSON.parse(jsonData);
-    const winhistext = winhis.text
-    console.log(winhistext);
-    document.getElementById("output_wintime").innerHTML = winhistext;
+
+    let object = {};
+
+    for (let i = 0; i < localStorage.length; i++) {
+
+        let key = localStorage.key(i);
+        object[key] = localStorage.getItem(key);
+
+        const jsonData = object[key];
+
+        const winhis = JSON.parse(jsonData);
+        const winhistext = winhis.text
+        console.log(winhistext)
+        //document.getElementById("output_wintime").innerHTML = winhistext;
+
+
+    }
+    console.log("時間をhtmlに表示しようとしたけど一番最後のデータしか表示できず詰んだ･･･")
 });
 
 
